@@ -53,7 +53,7 @@ public class Ese1_Verifica_filaB {
             
             thbackup1.start();
             
-            partenza = " ";
+            partenza = ".";
             
             while (!(partenza.equals("s"))) {
                 System.out.println("Premi 's' per far partire il backup del computer 2");
