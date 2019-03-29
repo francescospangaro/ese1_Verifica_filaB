@@ -14,8 +14,6 @@ import java.util.logging.Logger;
  * @author spangaro_francesco
  */
 public class DatiCondivisi {
-    private Semaphore startpc;
-    private Semaphore startbackup;
     private Semaphore offPc1;
     private Semaphore offPc2;
 
