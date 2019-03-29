@@ -20,29 +20,13 @@ public class DatiCondivisi {
     Semaphore offPc2;
 
     public DatiCondivisi() {
-        Semaphore startpc = new Semaphore(0);
-        Semaphore startbackup = new Semaphore(0);
-        Semaphore offPc1 = new Semaphore(0);
-        Semaphore offPc2 = new Semaphore(0);
+        this.offPc1 = new Semaphore(0);
+        this.offPc2 = new Semaphore(0);
     }
     
-    public void waitStartPc(){
-        try {
-            startpc.acquire();
-        } catch (InterruptedException ex) {
-            Logger.getLogger(DatiCondivisi.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
     
-    public void waitStartBackup(){
-        try {
-            startbackup.acquire();
-        } catch (InterruptedException ex) {
-            Logger.getLogger(DatiCondivisi.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
     
-    public void waitoffPc1(){
+    public void waitOffPc1(){
         try {
             offPc1.acquire();
         } catch (InterruptedException ex) {
@@ -56,5 +40,13 @@ public class DatiCondivisi {
         } catch (InterruptedException ex) {
             Logger.getLogger(DatiCondivisi.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+    
+    public void signalOffPc1(){
+        offPc1.release();
+    }
+    
+    public void signalOffPc2(){
+        offPc2.release();
     }
 }

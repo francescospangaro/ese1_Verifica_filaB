@@ -16,8 +16,10 @@ public class ThComputer2 extends Thread{
         this.ptrDati = ptrDati;
     }
     
+    @Override
     public void run(){
         System.out.println("Computer 2 acceso");
-        
+        ptrDati.waitOffPc2();
+        System.out.println("Computer 2 spento");
     }
 }
