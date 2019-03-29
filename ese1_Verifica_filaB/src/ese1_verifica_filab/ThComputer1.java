@@ -10,7 +10,7 @@ package ese1_verifica_filab;
  * @author spangaro_francesco
  */
 public class ThComputer1 extends Thread{
-    DatiCondivisi ptrDati;
+    private DatiCondivisi ptrDati;
 
     public ThComputer1(DatiCondivisi ptrDati) {
         this.ptrDati = ptrDati;

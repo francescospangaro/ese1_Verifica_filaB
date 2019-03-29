@@ -14,7 +14,7 @@ import java.util.logging.Logger;
  * @author spangaro_francesco
  */
 public class ThBackup1 extends Thread{
-    DatiCondivisi ptrDati;
+    private DatiCondivisi ptrDati;
 
     public ThBackup1(DatiCondivisi ptrDati) {
         this.ptrDati = ptrDati;

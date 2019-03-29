@@ -14,10 +14,10 @@ import java.util.logging.Logger;
  * @author spangaro_francesco
  */
 public class DatiCondivisi {
-    Semaphore startpc;
-    Semaphore startbackup;
-    Semaphore offPc1;
-    Semaphore offPc2;
+    private Semaphore startpc;
+    private Semaphore startbackup;
+    private Semaphore offPc1;
+    private Semaphore offPc2;
 
     public DatiCondivisi() {
         this.offPc1 = new Semaphore(0);
